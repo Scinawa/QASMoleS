@@ -61,6 +61,7 @@ def main(config):
     else:
         raise NotImplementedError
 
+    #scinawa: holy moly what is this horror?
     # Solver for training and test MolGAN
     if config.mode == 'train':
         solver = Solver(config, logging)
