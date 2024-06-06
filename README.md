@@ -1,16 +1,4 @@
-# QuantumMolGAN-PyTorch
-
-This is the PyTorch reimplementation of [Exploring the Advantages of Quantum Generative Adversarial Networks in Generative Chemistry](https://arxiv.org/abs/2210.16823)
-
-## Branches
-
-Different branches contain different experiments of the paper
-
-| Branch Name | Noise Generator | Generator| Discriminator |
-| :-----: | :---: | :---: |  :---: |
-| main | classical/quantum   | classical   | classical|
-| discriminator | classical/quantum   | classical   | classical/quantum|
-| generator | classical/quantum   | classical/quantum   | classical/quantum|
+# QASMoleS
 
 ## Environment
 
