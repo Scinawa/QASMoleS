@@ -34,6 +34,7 @@ Simply run the python script within the data direcotry.
 You need to comment or uncomment some lines of code in the main function.
 
 ```python
+cd data
 python sparse_molecular_dataset.py
 ```
 
