@@ -22,6 +22,7 @@ from utils.logger import Logger
 from frechetdist import frdist
 
 def upper(m, a):
+    print(m.shape, a.shape)
     res = torch.zeros((m.shape[0], 36, 5)).to(m.device).long()
     for i in range(m.shape[0]):
         for j in range(5):
@@ -402,7 +403,13 @@ class Solver(object):
             a_tensor = self.label2onehot(a, self.b_dim)
             x_tensor = self.label2onehot(x, self.m_dim)
             
-            ax_tensor = upper(a_tensor, x_tensor)
+            # ax_tensor = upper(a_tensor, x_tensor)
+            try:
+                ax_tensor = upper(a_tensor, x_tensor)
+            except Exception as e:
+                print(f"An error occurred while calling the 'upper' function: {e}")
+                # Handle the exception or re-raise it if needed
+                pass
 
             if self.quantum:
                 z = torch.stack(tuple(sample_list)).to(self.device).float()
